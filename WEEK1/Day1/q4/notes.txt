@@ -1,0 +1,65 @@
+Abstraction 
+    - Not providing the implementation details so that
+    a) It can be provided at a later point in the code hierarchy
+    b) We can explain functionality without significant focus in implementation details 
+
+Inheritance
+    - Either you speacialize the implementation for a specific subcategory 
+                OR 
+    - You develop logic which can be generalized to many types
+
+Polymorphism
+    - 
+Encapsulation
+
+Class & Object
+
+Composition
+
+Aggregation
+
+Association
+
+
+These are the 3 features by which we can do OOP :-
+There should be a way to create models/blueprint/template for data
+There should be a way to represent state of something in the language
+You should be able to execute functions based on type of data 
+
+
+
+***********const keyword**************
+Rule 1: const is applied to the token on its immediate left.
+If there is nothing to the left of const, apply const on the token to its immediate right 
+
+Rule 2: pointer symbol * is considerd a separate token
+
+Code Part : 
+
+Scenario 1: const with non-pointer primitive variable 
+const int n1 = 10; //n1 is a constant int
+int const n2 = 20; //n2 is a constant int
+
+Scenario 2: pointer with primitive
+int n3 = 99;
+int n4 = 188;
+
+//2a
+const int * ptr = &n3; //ptr is a pointer to a constant int 
+// *ptr = 77; //this will give error
+ptr = &n4; //this is okay
+
+//2b
+int * const ptr2 = &n3; //ptr2 is aconst pointer to an integer
+*ptr = 100; //this is okay
+// ptr2 = &n4; //Not okay
+
+//2c
+const int * const ptr3 = &n3; //ptr3 is a const pointer to a const integer
+// *ptr3 = 18; //Not okay
+// ptr3 = &n4; // not okay 
+
+Scenario 3:  CONST ON A STACK OBJECT 
+
+const Dummy d1(101, 67000.0f);
+

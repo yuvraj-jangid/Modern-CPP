@@ -1,0 +1,11 @@
+Objective : Make 3 lambda functions in 1 adaptor function in the functionalities function
+
+Each lambda takes one vector of integer and returns void 
+
+The lambda fns are :
+
+A) Lambda function to find the first element of the vector 
+B) Lambda function to find last element of the vector
+C) Lambda function to return the size of the vector
+
+The adaptor must accept ONLY ONE OF THE ABOVE LAMBDAS AT A TIME ALONG WITH A CONATINER OF INTEGERS 

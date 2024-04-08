@@ -1,0 +1,39 @@
+enum is made to actaully work with categorical data
+
+Vector is like : (data of vecto is stored in Heap)
+
+address of first element 
+adress of last element
+capacity of the vector
+
+
+We have done 
+
+defaulted and deleted speacial member functions
+override 
+member list initialization 
+in-class initialization
+for-each (range based for loop)
+enum class 
+constructor delegation 
+
+
+
+Jaha data ko Read only rakhna hai waha const use kro it's a good practice
+
+whatever you write in double quotes "" is cosnt char not a string it is converted into string
+
+we can use {} curly brackets to initialize aything this is the syntax of modern cpp 
+
+
+Debugger
+    there has to be configuration file so that you can give instruction to debugger 
+    need to appy break point -- to make the program run till this point 
+    
+
+Composition 
+    isme ek ke andar dusraa hota hai jaise car mein engine fir engine mein horsepower 
+    aur agar isme maanlo humne car hi delete kr diya toh engine delete ya accesss nahi kr sakte                                                                                                                                                                                                   
+
+Aggregation 
+    isme alag alag conatiners banane hote hai ek mein se kuch delete bhi kr do toh dusre ko kuch farak naa pade

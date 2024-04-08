@@ -1,0 +1,63 @@
+seguay : A smooth transition
+
+[ 101 | "Rohan" | 87000.0f, | "Developer" ]
+
+[ 204 | "Ajay" | 7000.0f, | "Tester" ]
+
+[ 301 | "Harshit" | 77000.0f, | "Trainer" ]
+
+********************************************************************************************************************************
+
+option 1 : store objects in fixed sized container with contiguous storage
+Benefits : 1) Random access
+           2) easy to find next and previous
+           3) no tension to resize or change in length
+
+Answer : Array data structure
+CPP implementation :: std::array<T, N>
+
+Note : 
+    1) AN ARRAY OF SIZE N WHEN DECLARED, IMMEDIATELY RESERVES SPACE FOR N ITEMS
+    THIS MEANS, N DEFAULT CONSTRUCTORS WILL HAPPEN AT THE TIME OF DECLARATION
+
+********************************************************************************************************************************
+------------> Read about allocators in CPP it's a very good topic
+
+option 2 : store objects in dynamically resizable conatiner which can be
+used like an array with reservation of elements or by pushing when required and resizing if necessary 
+
+Answer : Vector arrangment 
+CPP implementation : std::vector<T, ////>
+
+Benefits : 1)You can resize the conatiner during the runtime of the programmer
+           2)You can access elements via index randomly!
+
+Note : 
+    1) If you had elements beyond capacity, vector as to re-adjust.
+    Sometimes vector cannot expand adjacent to its boundary.
+    In such cases, a complete shift of data happens
+
+********************************************************************************************************************************
+
+option 3 : I would like to store data anywhere in RAM as long as I fetch it
+when i want it, Data items should be "linked" to each other.
+
+Answer : Linked List
+CPP implementation : std::forward_list (singly linked list)
+                     std::list (doublt linked list)
+
+********************************************************************************************************************************
+
+HASH TABLE
+
+1. Fix a mathematical of finding where to put the data [which row]
+2. We can use the mathematical formula to determine
+3. Where my data is when I need to read it later!
+
+[ 101 | "Rohan" | 87000.0f, | "Developer" ]
+[ 102 | "Ajay" | 7000.0f, | "Tester" ]
+[ 103 | "Harshit" | 77000.0f, | "Trainer" ]
+
+// formula [HASH FUNCTION] Modulus 9
+a) 101 % 9 = 2 // row 2, result of modulus 9 is hash value/ hash
+b) 102 % 9 = 3 // row 3

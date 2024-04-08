@@ -1,0 +1,9 @@
+Move semantics(cannot be done with reference can be done by pointer) 
+    -bina copy kiye data ki ownership change krna ya transfer krna 
+    -IT IS MADE FOR LARGE AMOUNT OF DATA 
+
+    -ghar kisiko bechna hai toh ghar thodi naya banaoge aap bass paper uske naam kr doge 
+    -same aise hi aap pehle data copy kroge fir jaha se copy kiya usme se delete kroge isme memory waste hogi usse achha 
+
+    -matlab data wahi hai bass access usko ab koi or kr raha hai 
+

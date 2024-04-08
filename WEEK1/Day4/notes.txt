@@ -1,0 +1,30 @@
+RAII (Release and is intialization)
+SBRM (scope based resource management)
+
+
+---------------RAII----------------->
+constructor mein cheeze acquire kro or usko terminate ya release krna hai wo destructor mein kro
+
+
+
+    A basic layout of smart pointer
+
+                                            HEAP
+                                     0x100H
+                                    [    101  | Yuvraj | 80000.0f          ]
+        STACK MEMORY
+    [
+            mptr
+        [   0x100H      ]
+        ....
+        ....
+        ....
+    ]
+    <-------------shared pointer---------------> 
+
+
+
+static_cast (if we have to convert type a into type b where type b and type has no relation/ no heirarchy like inheritance or anything we can use static_cast)
+We cannot change const using static_cast
+
+static_assert (static assertion is used for compile time)

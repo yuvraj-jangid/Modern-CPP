@@ -1,0 +1,63 @@
+4 tokens 
+
+int // datatype
+
+n1 //identifier value given by the user
+
+=  // assignment operator
+ 
+10 //rvalue (integer literal)
+
+something doesn't have permanent storage in RAM is known as rvalue
+
+any value name given by user and memory location is known as lvalue(which has both memory and name)
+
+
+void Magic(std::vector<int> val)
+Main(){
+    Magic(..............);
+}
+
+scenario 1 : Dessign the fucntion to accept lvalue
+            and rvalue both. Allow copy of lvalue and assignment of rvalue
+example:
+    Magic (std::vector<int> {1,2,3}); //assigned to val
+example:
+    std::vector<int> v1 {1,2,3,4,5};
+    Magic(v1); //v1's 24 bytes (pointers) copy to val
+    // copy construction. We are constructing val by
+    // using v1
+
+scenario 2 : lvalue to be accepted by refrence
+        No rvalues (temporaries, no ownership transfer)
+        No copy of data. Data should become accessible in Magic 
+
+    void Magic(std::vector<int>& val);
+example:
+    std:vector<int> v1 {1,2,3,4,5};
+    Magic(v1); // by refrence
+    Magic(std::vector<int<{1,2,3,4,5}); //compile time
+
+scenario 3 : I only want a single copy of data.
+    I only want rvalues so that user cannot create a duplicate copy of data in the caller function(main)
+    Data should no longer be accessible or owned by Main.
+
+    void Magic(std::vector<int>&& val);
+example :
+    std:vector<int> v1 {1,2,3,4,5};
+    Magic(v1); // by refrence, compile time error
+
+    Magic(std::vector<int>{1,2,3,4,5}); //okay!
+    Magic(std::move(v1)); //by rvalue refrence, Okay
+    
+scenario 4 : I want to design a fucntion where, lvalues are accepted 
+            by reference. I also want rvalues to be accepted by assignment.
+
+    void Magic(const std::vector<int>& val);
+
+example :
+    Magic(v1); // by refrence, OKAY
+    Magic(std::vector<int>{1,2,3,4,5}); //okay!
+    Magic(std::move(v1)); //by rvalue refrence, Okay
+    
+

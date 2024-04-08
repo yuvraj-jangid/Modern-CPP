@@ -1,0 +1,74 @@
+# encapsulation : Hide the internal representation of the object from any part/entity/line  of code outside the class.
+                  You can use data binding to acheive this by simply providing member functions as a layer between data and outside the world.
+                  We have to take help of data binding to do encapsulation.
+// data chupana
+
+# data binding : The concept of relating/binding member functions with data member
+
+# Abstraction : Hiding the implementation detail of a behaviour(functionalities)
+// behaviour chupana 
+                SO THAT
+
+                a) It allows programmers to re-implement a functionality in a different way down the class heirarchy by overriding in child classes
+
+                b) By using abstraction we can talk in "ABSTRACT" terms while explaining behaviour
+
+
+*************MAIN NOTES CODE**************
+
+psudo code to understand all the scenarios written in notes.txt in main folder
+
+class A {
+    public:
+    virtual void Display(){
+        std::cout << "A display\n";
+    }
+
+    void Test(){
+        std::cout << "A test called\n";
+    }
+};
+
+
+Rule 1: for a class that contains atleast 1 virtual method 
+A virtual table is created in memory.
+This table has addresses for the virtual methods functions
+
+Rule 2: If a class inherits from a parent class that also contains
+a vtable, the child will also implement its own vtable
+
+A* ptr = new B();
+ptr->Display();
+
+
+//step1 : verify where is Display()
+    -   go to class whose type is ptr's type 
+    -   go to A class. Verify whether this function is at least declared in class A
+
+//step2 : Verify is the method is non-virtual. If yes, call the function if function is virtual, proceed to step3
+
+//step3 : Now find the type of RHS (object type). Find the 
+
+
+class A VTable 
+[A::Display():: 0x10045H]
+0x777H
+|
+|
+[vptr] //vtable ka address
+
+
+********CASTING**********
+
+    4: I want to call fn. fn exists in the parent.
+       fn also exists in the child. But fn is MARKED virtual 
+
+       compiler will call the most derived version of fn
+       FROM THE INHERITANCE heirarchy
+
+                PARENT
+                 /  \
+                /    \
+            CHILD1  CHILD2
+
+            PARENT *P = new CHILD2();

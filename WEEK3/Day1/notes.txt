@@ -1,0 +1,109 @@
+Processor : It is a hardware device based on SILICON (AT LEAST TILL TODAY) which executed instructions given
+    e.g. : intel i5 12th gen 1230u
+
+Core : It is a section of processor which is capable or executing ONE WHOLE PROCESS
+
+SINGLE THREAD, SINGLE PROCESS, SYNCHRONUS PROGRAMS! (we have written till now)
+
+Delays : IO delay, CPU-BOUND DELAY!
+
+THREAD : is a set of instructions which is a independent mini program 
+    is a mini program
+    you technical losse control to it because OS handles it (we cannot decide which we have to run fist)
+    whenever you are running thread you are talking about memory level execution 
+
+Buffer : reserving a memory for so and other reason called buffer like memory 
+
+Mutex : 
+
+TERMINAL THINGS: 
+    g++ sample3.cpp -lpthread -o  app && time ./app
+    for((i=0; i<50; i++)); do ./app ; done // write in terminal so that you can execute your program 50 times
+
+--------------------------------------------------------------------------------------------------------------------
+
+QUESTIONS AND ANSWERS
+
+1 - What are we doing?
+    - We are doing more work in our work oer second
+    OR
+    - Want more efficiency in my program for which i want my hardware better
+
+2 - HOW?
+    - By using the OS for support. We are requesting OS to run independent sections of my program parallely possible
+      or concurrently if nothing else works out!
+
+3 - Syntax wise what to do?
+
+    - Each of your independent functions can be treated "logical threads".
+      They can be scheduled by OS if you create a thread object amd attach it to one callable with right parameters
+
+    - Also remember to wait for threads to finish
+    OR
+    - DETACH FROM SPAWNED THREADS
+
+4 - Why did you join threads?
+    - Because main thread cannot finish before other threads as spawned threads need to report back to main via signals.
+      If main is already finished, then thread has to become daemon thread (a thread running in the background is daemon)
+
+5 - What is std::thread?
+    - It is a class which is a wrapper around a native platform specific OS-level thread.
+
+6 - Can we copy threads?
+    - No, Because once a mini program is started, copying it would mean duplicating and doing the same thing again!
+
+7 - Can we make a container of threads?
+    - YES. since thread instances are objects, you can do this!
+
+8 - What is a race condition?
+    - TWO OR MORE threads are fighting  TO PERFORM A WRITE OPERATION ON SHARED MEMORY 
+
+9 - What is critical section?
+    - any part of the program where race condition can happen to cause data integrity issue, in coherent output or worse
+
+10 - How to avoid race condition ? 
+    - take action to synchronize threads especially for critical sections
+
+11 - Syntatically, how to do this?
+    - Choose between the plethora (too many)
+
+    - mutex : a binary semaphore which needs to locked/unlocked manually
+
+    - lock_guard : which is a scope based lock that uses RATI
+
+    - unique_lock : it can be locked/unlocked manually as well with RATI rules
+
+
+12 - How will I know which one to choose?
+    
+    - COMMON SENSE!
+
+13 - HOW WILL I LEARN ALL THIS?
+    - THAT'S WHERE HARSHIT COME INTO THE PICTURE!
+    - Also, CPPCON and Concurrency in Action books are great resources!
+
+14 - All this sounds like OS leve stuff. Why am I learning it?
+    - Because all developer need to use hardware effeciently
+
+15 - What is the SYNCHRONUS and ASYNCHRONUS stuff?
+    - If you start command/instruction N ONLY AFTER COMMAND/ISNTRUCTION N-1 IS FULLY COMPLETED, execution is synchronous
+
+    ELSE,
+    asynchronous
+
+16 - Is async the same async I have learnt in JavaScript /and/or other languages?
+    - YES 
+
+17 - What if i don't understand all this before marathon?
+    - well......
+        I heard TCS is still hiring
+
+
+try{
+    std::lock_guard<std::mutex> lk(mt);
+    amount += 10;
+    PerformActionAfterModification();
+}catch(std::runtime_error& ex){
+    std::cout << ex.what() << "\n";
+    RecordLogsOfException();
+}

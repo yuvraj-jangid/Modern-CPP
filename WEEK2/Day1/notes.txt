@@ -1,0 +1,14 @@
+1) Function wrapper
+
+
+2) lambda function 
+    - [] written by square brackets
+    - aisaa function jo aapko short time ke liye banana hai or jo jyada use nahi hoga or jo global bhi nahi rakhna
+    - [] capture clause used for creating lambda closures
+
+
+
+-----------Reference-------------
+
+reference ka reference nahi le sakte 
+kyunki reference ka khud kuch memory nahi hota matlab does not exist in memory

@@ -1,0 +1,3 @@
+if there is & symbol just after the data type then it is call by reference (eg is int&)
+
+reference is nothing but an alternate name of data

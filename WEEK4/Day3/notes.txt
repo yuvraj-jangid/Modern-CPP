@@ -1,0 +1,32 @@
+for (int i = 0; i < row; i++) {
+    for (int j = 0; j < columns; j++){                    
+    }                                     =========>  Time complexity for this is Big O(row*column)
+}
+
+------------------------------------------------------------------------------------------------------------
+
+// Linear Search
+
+operation : Access item and compare!
+N : Size of elements to be checked 
+
+Time complexity : O(N)
+
+------------------------------------------------------------------------------------------------------
+
+Time complexity IS NOT MEASURED IN UNITS OF TIME!!!
+
+Time complexity is always concerned about "How many operations" per input elements!
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+How to analyse Time Complexity : 
+
+step 1 : Always find relation between N (number of input items) and operation where "operation" is context specific
+
+e.g. : In Linear search, operation is "access element and compare"
+       In binary search, check middle, if found, okay, else divide 
+
+
+
+Bubble Sort :  

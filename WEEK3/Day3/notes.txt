@@ -1,0 +1,39 @@
+Command line (basic usage)
+Git version control 
+Makefiles and CMake
+Great understanding of OOP!
+
+- Effective Modern CPP! (Book)
+- C++ The Complete Reference! (Basic C++ Book)
+
+***THREADS ke saath normal exception kaam nahi krte*** --> future exception use krna padega
+
+**purposes of Async*** ---> pass data in future and capture return values
+
+
+1) std::thread
+    - one thread
+    - container of threads 
+    - std::mutex for race condition
+    - std::lock_gurad to manage mutex based on scope 
+
+2) if initializer
+
+3) std::optional
+
+4) structured binding 
+
+5) std::varients (virtual ki jagah)
+    - functional polymorphism
+        - std::visit, std::holds_alternative
+
+6) std::condition_variable
+    - unique_lock, notify machanism
+
+7) std::async
+    - with future_input
+    - without future input
+
+8) fold expressions 
+
+9) variadic templates 
